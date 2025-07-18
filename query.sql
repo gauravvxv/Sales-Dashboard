@@ -50,7 +50,8 @@ SELECT
   ROUND(SUM(sales)::NUMERIC, 2) AS total_sales
 FROM sales_data
 GROUP BY month_name, month_number
-ORDER BY month_number;
+ORDER BY total_sales
+limit 5;
 
 -- 7. Top 5 top-performing States and cities by sales
 select
@@ -69,4 +70,37 @@ round(sum(profit)::numeric,2) as total_profit
 from
 sales_data
 group by region
-order by total_profit;
+order by total_profit
+limit 1;
+
+-- 9. Compare sales by region and profit by region.
+select
+region,
+round(sum(sales)::numeric,2) as total_sales,
+round(sum(profit)::numeric,2) as total_profit
+from
+sales_data
+group by region
+order by total_sales desc;
+
+-- 10. Find the top 5 selling categories and subcategories.
+select 
+category,
+subcategory,
+round(sum(sales)::numeric,2) as total_sale
+from 
+sales_data
+group by category,subcategory
+order by total_sale desc
+limit 5;
+
+-- 11. Discover most profitable products.
+select subcategory,
+round(sum(profit)::numeric,2) as total_profit
+from sales_data
+group by subcategory
+order by total_profit desc;
+
+-- 12. List the products that are sold a lot but make very little profit.
+    
+
