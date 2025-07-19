@@ -176,3 +176,51 @@ group by
 subcategory
 order by total_returns desc; 
 
+-- 21. Find the top 5 products or categories with the most returns.
+select category,subcategory,
+count(returns) as total_returns 
+from sales_data
+where returns = 1
+group by
+category,subcategory
+order by total_returns desc
+limit 5;
+
+-- 22. Compare return rate per category.
+select category,
+count(case when returns = 1 then 1 end) as total_returns,
+count(*) as total_orders,
+round(count(case when returns = 1 then 1 end)::numeric / count(*)::numeric,2)*100 as return_rate
+from sales_data
+group by category,returns
+order by return_rate desc;
+
+-- 23. Check which payment modes are used most frequently.
+select payment_mode,count(*) as total_payment_mode from sales_data group by payment_mode order by total_payment_mode desc;
+
+-- 24. See if any payment mode is linked with more returns.
+select 
+payment_mode,
+count(*) as total_payment_mode,
+sum(case when returns = 1 then 1 else 0 end) total_returns
+from sales_data
+group by payment_mode
+order by total_payment_mode desc;
+
+-- 25. Calculate the profit margin (profit/sales) per order or product.
+select category,
+round(sum(sales)::numeric,2) as total_sale,
+round(sum(profit)::numeric,2) as total_profit,
+round((sum(profit)::numeric / sum(sales)::numeric)*100,2) as profit_margin
+from sales_data
+group by category
+order by profit_margin desc;
+
+-- 26. Find the best customer in each region.
+select distinct on (region)
+customer_name,
+region,
+round(sum(sales)::numeric,2) as highest_sale from sales_data
+group by customer_name,region order by region,highest_sale desc;
+
+
