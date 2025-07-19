@@ -149,3 +149,30 @@ round(sum(sales)::numeric / count(distinct order_id),2) as avg_order_value
 from sales_data
 group by customer_name
 order by avg_order_value desc;
+
+-- 17. the average shipping time.
+select round(avg(ship_date::date - order_date::date),2) from sales_data;
+
+-- 18. Identify orders with the longest shipping delays.
+select order_id,order_date,ship_date,
+round(max(ship_date::date - order_date::date),2) as maximum_delay
+from sales_data
+group by order_id,order_date,ship_date
+order by maximum_delay desc
+limit 1;
+
+-- 19. Group sales by ship_mode to find the most used method.
+select ship_mode,
+count(*) as total_orders,
+round(sum(sales)::numeric,2) as total_sale
+from sales_data group by ship_mode
+order by total_sale desc;
+
+-- 20. Count the number of returned orders.
+select subcategory,count(returns) as total_returns 
+from sales_data
+where returns = 1
+group by
+subcategory
+order by total_returns desc; 
+
