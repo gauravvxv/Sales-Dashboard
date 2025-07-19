@@ -102,5 +102,50 @@ group by subcategory
 order by total_profit desc;
 
 -- 12. List the products that are sold a lot but make very little profit.
-    
+select subcategory,
+round(sum(sales)::numeric,2) as total_sale,
+round(sum(profit)::numeric,2) as total_profit,
+ROUND((SUM(profit)::numeric / NULLIF(SUM(sales), 0)::numeric) * 100, 2) AS percentage
+from sales_data
+group by subcategory
+HAVING SUM(sales) > 10000 AND SUM(profit) < 500
+order by total_sale desc;
 
+-- 13. Identify products with negative profits.
+select
+subcategory,
+round(sum(sales)::numeric,2) as total_sales,
+round(sum(profit)::numeric,2) as total_profit
+from
+sales_data
+group by
+subcategory
+having sum(profit) < 0
+order by total_profit desc;
+
+-- 14. List the top 10 customers by sales.
+select 
+customer_name,
+round(sum(sales)::numeric,2) as total_sale
+from sales_data
+group by customer_name
+order by total_sale desc
+limit 10;
+
+-- 15. Group customers by segment  and compare performance.
+select
+segment,
+count(distinct customer_id) as total_customers,
+round(sum(sales)::numeric,2) as total_sale
+from sales_data
+group by segment order by total_sale desc;
+
+-- 16. Analyze average order size per customer.
+select 
+customer_name, 
+count(distinct order_id) as total_order,
+round(sum(sales)::numeric,2) as total_sales,
+round(sum(sales)::numeric / count(distinct order_id),2) as avg_order_value
+from sales_data
+group by customer_name
+order by avg_order_value desc;
