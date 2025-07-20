@@ -1,6 +1,6 @@
 # 📊 SuperStore Sales Dashboard
 
-A data-driven business intelligence project built using **Power BI**, **SQL**, and **Python (SQLAlchemy)** to extract actionable insights from SuperStore sales data. This dashboard helps uncover key business trends and supports data-driven decision-making.
+A project built using **Power BI**, **SQL**, and **Python (SQLAlchemy)** to extract actionable insights from SuperStore sales data. This dashboard helps uncover key business trends and supports data-driven decision-making.
 
 ---
 
