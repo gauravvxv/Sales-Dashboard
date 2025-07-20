@@ -18,8 +18,6 @@ This end-to-end project covers:
 
 ## 📁 Project Structure
 
-## 📁 Project Structure
-
 | Path                      | Description                                           |
 |---------------------------|-------------------------------------------------------|
 | `📦 Sales-Dashboard/`      | Root directory of the project                         |
