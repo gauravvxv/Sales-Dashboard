@@ -133,22 +133,30 @@ This end-to-end project covers:
   - Profit margin, shipping time, customer value
 
 
+## 💡 Recommendations
 
-💡 Recommendations
-🎯 Focus on West & East regions
-🧍 Prioritize the Consumer segment
-🛒 Boost Phones, Chairs, and Binders stock
-💸 Offer incentives for digital payments
-🗓️ Plan major promotions for Q4
+- 🎯 Focus on **West** & **East** regions for higher sales opportunities  
+- 🧍 Prioritize the **Consumer segment**, which contributes the most revenue  
+- 🛒 Boost stock availability of top-selling sub-categories: **Phones**, **Chairs**, and **Binders**  
+- 💸 Offer incentives for **digital payments** to reduce dependency on COD  
+- 🗓️ Plan major promotions and campaigns around **Q4 (Oct–Dec)** when sales peak  
 
-✅ Results
-✅ Built an interactive dashboard using Power BI
-✅ Wrote 26 optimized SQL queries for exploration
-✅ Automated Excel-to-SQL pipeline using Python
-✅ Delivered business-ready, visual insights
+---
 
-📬 Contact
-📩 Feel free to connect and discuss data projects:
-LinkedIn: linkedin.com/in/gauravxv
-Email: gauravxv0410@gmail
+## ✅ Results
+
+- ✅ Built an **interactive dashboard** using Power BI  
+- ✅ Wrote **26 optimized SQL queries** to extract insights  
+- ✅ Automated **Excel-to-SQL pipeline** using Python and SQLAlchemy  
+- ✅ Delivered **business-ready, visual insights** for decision-making  
+
+---
+
+## 📬 Contact
+
+Feel free to connect and discuss data projects:
+
+- 🔗 **LinkedIn**: [linkedin.com/in/gauravxv](https://linkedin.com/in/gauravxv)  
+- 📧 **Email**: gauravxv0410@gmail.com
+
 
