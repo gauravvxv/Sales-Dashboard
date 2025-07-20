@@ -18,12 +18,20 @@ This end-to-end project covers:
 
 ## 📁 Project Structure
 
-📦 Sales-Dashboard
-│
-├── Data ── SuperStore_Sales_Dataset.csv, cleaned.xlsx
-├── Power BI - sales.pbix, sales.pdf
-├── connect_to_sql.py
-└─ query.sql
+## 📁 Project Structure
+
+| Path                      | Description                                           |
+|---------------------------|-------------------------------------------------------|
+| `📦 Sales-Dashboard/`      | Root directory of the project                         |
+| ├── `Data/`               | Contains raw and cleaned datasets                     |
+| │  ├── `SuperStore_Sales_Dataset.csv` | Raw SuperStore sales data            |
+| │  └── `cleaned.xlsx`     | Cleaned and preprocessed data                         |
+| ├── `Power BI/`           | Power BI files for dashboard creation and export      |
+| │  ├── `sales.pbix`       | Power BI dashboard project                            |
+| │  └── `sales.pdf`        | Exported PDF version of the dashboard                 |
+| ├── `connect_to_sql.py`   | Python script to import Excel data into SQL database  |
+| └── `query.sql`           | SQL script containing 26 analytical queries           |
+
 
 
 ---
