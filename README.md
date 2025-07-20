@@ -125,14 +125,7 @@ This end-to-end project covers:
   - Monthly and yearly trend analysis
   - Profit margin, shipping time, customer value
 
-- 🔌 **Excel to SQL Import** with Python:
-```python
-from sqlalchemy import create_engine
-import pandas as pd
 
-df = pd.read_excel("Superstore_Sales.xlsx")
-engine = create_engine("postgresql://username:password@localhost/db_name")
-df.to_sql("sales_data", engine, if_exists="replace", index=False)
 
 💡 Recommendations
 🎯 Focus on West & East regions
