@@ -18,13 +18,12 @@ This end-to-end project covers:
 
 ## 📁 Project Structure
 
-📦 SuperStore-Sales-Dashboard
+📦 Sales-Dashboard
 │
-├── sales.pdf # Final Power BI dashboard export
-├── README.md # Project summary (this file)
-├── /sql_queries # Folder with 26 custom SQL queries
-├── /data_import # Python scripts for Excel → SQL
-└── /assets # Dashboard screenshots (optional)
+├── Data ── SuperStore_Sales_Dataset.csv, cleaned.xlsx
+├── Power BI - sales.pbix, sales.pdf
+├── connect_to_sql.py
+└─ query.sql
 
 
 ---
